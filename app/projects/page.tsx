@@ -6,7 +6,8 @@ import {motion} from 'framer-motion'
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
-import { BsArrowUpRight, BsGithub } from "react-icons/bs";
+import { BsGithub } from "react-icons/bs";
+import type { Swiper as SwiperClass } from "swiper";
 
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
@@ -21,36 +22,101 @@ const projects = [
     num: "01",
     category: "Full Stack",
     title: "EduKids",
-    desc: "Edukids é um sistema de gestão escolar voltado para escolas de educação infantil, desenvolvido com Django e React.",
-    stack: [{name: 'Html 5'}, {name: 'Css 3'}, {name: 'JavaScript'}, {name: 'Python'}, {name: 'Django'}],
-    image: "/assets/work/thumb1.png",
+    desc: "Edukids é um sistema de gestão escolar feito sob medida para a escola Flores de Maria envolvendo persistência de dados e autenticação, com o objetivo de otimizar a gestão escolar e melhorar a experiência de comunicação da escola com os pais.",
+    stack: [{name: 'Html 5'}, {name: 'Css 3'}, {name: 'JavaScript'}, {name: 'Python'}, {name: 'Django'}, {name: 'PostgreSQL'}, {name: 'JWT'}],
+    image: "/assets/work/portifolio2.png",
     github: "https://github.com/heribertomonteiro/edukids"
   },
   {
     num: "02",
-    category: "Full Stack 2",
-    title: "EduKids",
-    desc: "Edukids é um sistema de gestão escolar voltado para escolas de educação infantil, desenvolvido com Django e React.",
-    stack: [{name: 'Html 5'}, {name: 'Css 3'}, {name: 'JavaScript'}, {name: 'Python'}, {name: 'Django'}],
-    image: "/assets/work/thumb2.png",
-    github: "https://github.com/heribertomonteiro/edukids"
+    category: "Full Stack",
+    title: "Classificação de Leads",
+    desc: "Sistema de classificação de leads para empresas de marketing digital. O sistema foi construido para classificar os leads com base em seu comportamento e características. Só pessoas AUTENTICADAS podem acessar a página de leads!",
+    stack: [{name: 'React'}, {name: 'TailWind'}, {name: 'TypeScript'}, {name: 'NestJS'}, {name: 'MySQL'}, {name: 'JWT'}],
+    image: "/assets/work/leads_portifolio.png",
+    github: "https://github.com/heribertomonteiro/lead-classifier"
   },
   {
     num: "03",
-    category: "Full Stack 3",
-    title: "EduKids",
-    desc: "Edukids é um sistema de gestão escolar voltado para escolas de educação infantil, desenvolvido com Django e React.",
-    stack: [{name: 'Html 5'}, {name: 'Css 3'}, {name: 'JavaScript'}, {name: 'Python'}, {name: 'Django'}],
-    image: "/assets/work/thumb3.png",
-    github: "https://github.com/heribertomonteiro/edukids"
+    category: "Front-End",
+    title: "F3 Rastreamentos",
+    desc: "Landing page para empresa de rastreamento veicular de acordo com as necessidades de UI/UX do cliente.",
+    stack: [{name: 'NextJS'}, {name: 'TypeScript'}, {name: 'TailWind'}, {name: 'ShadCN'}],
+    image: "/assets/work/f3_portifolio.png",
+    github: "https://github.com/heribertomonteiro/f3-rastreamentos-landig-page"
   },
+  {
+    num: "04",
+    category: "Full Stack",
+    title: "FSW-Barber",
+    desc: "Sistema de gestão para barbearias que possibilita gerenciar os clientes com agendamentos e serviços de barbearia.",
+    stack: [{name: 'NextJS'}, {name: 'TypeScript'}, {name: 'TailWind'}, {name: 'ShadCN'}, {name: 'Prisma'}, {name: 'PostgreSQL'}],
+    image: "/assets/work/fsw3_portifolio.png",
+    github: "https://github.com/heribertomonteiro/FSW-Barber"
+  },
+  {
+    num: "05",
+    category: "Back-End",
+    title: "CineReserve",
+    desc: "Sistema de vendas de ingressos para cinemas, onde foi trabalhado concorreência impedindo que mais de um usuário compre o mesmo ingresso, além de testes e sistema plug-and-play.",
+    stack: [{name: 'Python'}, {name: 'Django Rest Framework'}, {name: 'PostgreSQL'}, {name: 'Redis'}, {name: 'Docker'}, {name: 'Pytest'}, {name: 'JWT'}],
+    image: "/assets/work/cinereserve_portifolio.png",
+    github: "https://github.com/heribertomonteiro/CineReserve"
+  },
+  {
+    num: "06",
+    category: "Back-End",
+    title: "Sistema de Métricas",
+    desc: "Sistema de métricas para monitoramento de aplicações através de middlewares, onde foi trabalhado com coleta e armazenamento de métricas e visualização de dados.",
+    stack: [{name: 'TypeScript'}, {name: 'NestJS'}, {name: 'PostgreSQL'}],
+    image: "/assets/work/metrics_portifolio.png",
+    github: "https://github.com/heribertomonteiro/observability-api"
+  },
+  {
+    num: "07",
+    category: "Back-End",
+    title: "Blog API",
+    desc: "API para gerenciamento de um blog, com endpoints para criação, leitura, atualização e exclusão de posts e usuários. Além diss, foi implementado um sistema RBAC para controle de acesso baseado em funções, onde os usuários têm diferentes níveis de permissão para acessar e manipular os recursos do blog.",
+    stack: [{name: 'TypeScript'}, {name: 'NestJS'}, {name: 'PostgreSQL'}],
+    image: "/assets/work/rbac_portifolio.png",
+    github: "https://github.com/heribertomonteiro/Sistema-RBAC"
+  },  
+  {
+    num: "08",
+    category: "Sistemas Embarcados",
+    title: "Transmissão de dados via LoRa",
+    desc: "Sistema de transmissão de dados de temperatura e umidade via tecnologia LoRa entre um FPGA e um Microcontrolador.",
+    stack: [{name: 'IoT'}, {name: 'FPGA'}, {name: 'LoRa'}, {name: 'AHT10'}],
+    image: "/assets/work/lora_portifolio.png",
+    github: "https://github.com/heribertomonteiro/transmissao-de-dados-via-LoRa"
+  },  
+  {
+    num: "09",
+    category: "Sistemas Embarcados",
+    title: "Minerador de Bitcoin",
+    desc: "Neste projeto, foi desenvolvido um minerador de Bitcoin utilizando um FPGA para realizar os cálculos de hash necessários para a mineração. O sistema é capaz de processar grandes volumes de dados e realizar a mineração de forma eficiente, contribuindo para a rede Bitcoin.",
+    stack: [{name: 'FPGA'}, {name: 'Python'}],
+    image: "/assets/work/minerador_bitcoin.png",
+    github: "https://github.com/heribertomonteiro/Minerador-Bitcoin-em-FPGA"
+  },
+  {
+    num: "10",
+    category: "Obrigado",
+    title: "Projetos principais",
+    desc: "Aqui estão listados alguns dos meus projetos mais recentes e relevantes que trabalhei com tecnologias variadas, mas sinta-se à vontade para explorar meu GitHub para ver mais trabalhos e contribuições que fiz ao longo do tempo.",
+    stack: [{name: 'GitHub'}, {name: 'Portfólio'}],
+    image: "/assets/work/legal6.png",
+    github: "https://github.com/heribertomonteiro/"
+  },
+
+
 ]
 
 const Projects = () => {
 
   const [project, setProject] = useState(projects[0]);
 
-  const handleSlideChange = (swiper: any) => {
+  const handleSlideChange = (swiper: SwiperClass) => {
     // Obter o índice do slide ativo
     const activeIndex = swiper.activeIndex;
     setProject(projects[activeIndex]);
@@ -58,19 +124,24 @@ const Projects = () => {
 
   return <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { delay: 2.4, duration: 0.4, ease: "easeIn" } }} className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0">
     <div className="w-full max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto">
-      <div className="flex flex-col xl:flex-row xl:gap-7.5">
-        <div className="w-full xl:w-[50%] xl:h-115 flex flex-col xl:justify-between order-2 xl:order-0">
-          <div className="flex flex-col gap-7.5 h-[50%]">
+      <div className="flex flex-col xl:flex-row xl:gap-8">
+        <div className="w-full xl:w-[50%] flex flex-col xl:justify-between order-2 xl:order-0">
+          <div className="h-115 flex flex-col gap-6 rounded-xl border border-white/10 bg-white/5 p-6 xl:p-8">
             {/** Project Number */}
-            <div className="text-8xl leading-none font-extrabold text-outline">{project.num}</div>
-            {/** Project Category */}
-            <h2 className="text-4xl font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">Projeto {project.category}</h2>
+            <div className="text-6xl leading-none font-extrabold text-outline text-transparent opacity-70">{project.num}</div>
+            {/** Project Header */}
+            <div className="flex flex-wrap items-center gap-3">
+              <h2 className="h2 text-4xl text-white leading-[1.05]">{project.title}</h2>
+              <span className="px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/70 text-sm capitalize">
+                {project.category}
+              </span>
+            </div>
             {/** Project Description */}
-            <p className="text-white/60">{project.desc}</p>
-            <ul className="flex flex-wrap gap-4">
+            <p className="text-white/60 leading-relaxed">{project.desc}</p>
+            <ul className="flex flex-wrap gap-x-4 gap-y-2">
               {project.stack.map((item, index) => {
                 return (
-                  <li key={index} className="text-xl text-accent whitespace-nowrap">
+                  <li key={index} className="text-base xl:text-lg text-accent whitespace-nowrap">
                     {item.name}
                     {/** remover a última vírgula */}
                     {index !== project.stack.length - 1 && ","}
@@ -78,15 +149,14 @@ const Projects = () => {
                 )
               })}
             </ul>
-            {/*Border*/}
-            <div className="border border-white/20"></div>
             {/*Button*/}
-            <div>
+          </div>
+            <div className="mt-5">
               <Link href={project.github} target="_blank">
                 <TooltipProvider>
                   <Tooltip>
-                    <TooltipTrigger className="w-15 h-15 bg-white/5 flex justify-center items-center group">
-                      <BsGithub className="text-white text-3xl group-hover:text-accent"/>
+                    <TooltipTrigger className="group w-15 h-15 rounded-full border border-white/10 bg-white/5 flex justify-center items-center transition-colors duration-300 hover:border-white/20">
+                      <BsGithub className="text-white text-3xl transition-colors duration-300 group-hover:text-accent"/>
                     </TooltipTrigger>
                     <TooltipContent>
                       <p>Repositório no GitHub</p>
@@ -95,17 +165,24 @@ const Projects = () => {
                 </TooltipProvider>
               </Link>
             </div>
-          </div>
         </div>
         <div className="w-full xl:w-[50%] xl:h-115">
           <Swiper spaceBetween={30} slidesPerView={1} onSlideChange={handleSlideChange} className="xl:h-130 mb-12">
             {projects.map((item, index) => {
               return (
                 <SwiperSlide key={index} className='w-full'>
-                  <div className='h-115 relative group flex justify-center items-center bg-pink-50/20'>
-                    <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
-                    <div className="relative w-full h-full">
-                      <Image src={item.image} alt={item.title} fill className="object-cover"/>
+                  <div className='h-115 relative group flex justify-center items-center'>
+                    <div className="relative w-full h-full rounded-xl overflow-hidden border border-white/10 bg-white/5">
+                      <Image
+                        src={item.image}
+                        alt={item.title}
+                        fill
+                        sizes="(max-width: 1279px) 100vw, 640px"
+                        quality={100}
+                        priority={index === 0}
+                        unoptimized
+                        className="object-contain xl:object-cover"
+                      />
                     </div>
                   </div>
                 </SwiperSlide>
