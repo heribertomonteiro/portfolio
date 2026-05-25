@@ -1,6 +1,5 @@
 "use client";
 
-import { info } from 'console';
 import {
   FaHtml5,
   FaCss3Alt,
@@ -31,7 +30,7 @@ import { motion } from 'framer-motion';
 
 const about = {
     title: "Sobre mim",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel sapien augue.",
+    desc: "Desenvolvedor Full Stack júnior com formação em Tecnologia em Sistemas para Internet e residência tecnológica concluída. Tenho forte foco em Next.js + TypeScript no front-end, experiência no desenvolvimento de APIs e microserviços no back-end e prática com integrações via REST, webhooks e automações. No back-end, atuo com Node.js (NestJS e Express) e também com Django (Django REST Framework), usando PostgreSQL e Redis, além de Docker. Gosto de trabalhar em produtos SaaS reais, evoluindo código existente com atenção à organização, testes (unitários/integração) e documentação. Interesse em automações com n8n e integrações com plataformas de mensagens (WhatsApp).",
     info: [
       {
         fieldName: "Nome",
@@ -63,7 +62,7 @@ const about = {
 const experiences = {
     icon: "/assets/resume/badge.svg",
     title: "Minha experiência",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel sapien augue.",
+    desc: "Atuei em projetos profissionais, pessoais e acadêmicos, desenvolvendo e evoluindo soluções de ponta a ponta.",
     items: [
       {
         company: "Instituto Federal do Rio Grande do Norte",
@@ -107,7 +106,7 @@ const experiences = {
 const educations = {
   icon: "/assets/resume/education.svg",
   title: "Minha educação",
-  desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel sapien augue.",
+  desc: "Graduação em Tecnologia em Sistemas para Internet (desenvolvimento web e integração de serviços) e residência tecnológica em Sistemas Embarcados (IoT/FPGA), com foco em aplicação prática e entrega de soluções.",
   items: [
     {
       institution: "Instituto Federal do Rio Grande do Norte",
@@ -134,7 +133,7 @@ const educations = {
 
 const skills = {
     title: "Minhas Habilidades",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel sapien augue.",
+    desc: "Stack moderna para web e back-end, com foco em performance, organização, testes e boas práticas, além de vivência com sistemas embarcados (IoT/FPGA).",
     skillList: [
       {
         icon: <FaHtml5/>,
@@ -216,14 +215,14 @@ const About = () => {
         </TabsList>
         <div className='min-h-[70vh] w-full'>
           <TabsContent value="experience">
-            <div className="flex flex-col gap-7 5 text-center xl:text-left">
+            <div className="flex flex-col gap-7.5 text-center xl:text-left">
               <h3 className='text-4xl font-bold'>{experiences.title}</h3>
               <p className='max-w-150 text-white/60 mx-auto xl:mx-0'>{experiences.desc}</p>
               <ScrollArea className='h-100'>
                 <ul className='grid grid-cols-1 lg:grid-cols-2 gap-7.5'>
                   {experiences.items.map((item, index) => {
                     return (
-                      <li key={index} className='bg-[#232329] h-46 py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1'>
+                      <li key={index} className='rounded-xl border border-white/10 bg-white/5 py-6 px-8 flex flex-col items-center lg:items-start gap-2'>
                         <span className='text-accent'>{item.duration}</span>
                         <h3 className='text-xl max-w-65 min-h-15 text-center lg:text-left'>{item.position}</h3>
                         <div className='flex items-center gap-3'>
@@ -238,14 +237,14 @@ const About = () => {
             </div>
           </TabsContent>
           <TabsContent value="education">
-             <div className="flex flex-col gap-7 5 text-center xl:text-left">
+             <div className="flex flex-col gap-7.5 text-center xl:text-left">
               <h3 className='text-4xl font-bold'>{educations.title}</h3>
               <p className='max-w-150 text-white/60 mx-auto xl:mx-0'>{educations.desc}</p>
               <ScrollArea className='h-100'>
                 <ul className='grid grid-cols-1 lg:grid-cols-2 gap-7.5'>
                   {educations.items.map((item, index) => {
                     return (
-                      <li key={index} className='bg-[#232329] h-46 py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1'>
+                      <li key={index} className='rounded-xl border border-white/10 bg-white/5 py-6 px-8 flex flex-col items-center lg:items-start gap-2'>
                         <span className='text-accent'>{item.duration}</span>
                         <h3 className='text-lg max-w-65 min-h-15 text-center lg:text-left'>{item.course}</h3>
                         <div className='flex items-center pt-6 gap-3'>
@@ -272,7 +271,7 @@ const About = () => {
                       <li key={index}>
                         <TooltipProvider>
                           <Tooltip>
-                            <TooltipTrigger className='w-full h-30 bg-[#232329] rounded-xl flex justify-center items-center group'>
+                            <TooltipTrigger className='w-full h-30 rounded-xl border border-white/10 bg-white/5 flex justify-center items-center group'>
                               <div className='text-5xl group-hover:text-accent transition-all duration-300'>{skill.icon}</div>
                             </TooltipTrigger>
                             <TooltipContent>
