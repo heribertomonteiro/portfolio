@@ -96,7 +96,7 @@ const projects = [
     title: "Minerador de Bitcoin",
     desc: "Neste projeto, foi desenvolvido um minerador de Bitcoin utilizando um FPGA para realizar os cálculos de hash necessários para a mineração. O sistema é capaz de processar grandes volumes de dados e realizar a mineração de forma eficiente, contribuindo para a rede Bitcoin.",
     stack: [{name: 'FPGA'}, {name: 'Python'}],
-    image: "/assets/work/minerador_bitcoin.png",
+    image: "/assets/work/minerador_bitcoin1.png",
     github: "https://github.com/heribertomonteiro/Minerador-Bitcoin-em-FPGA"
   },
   {
