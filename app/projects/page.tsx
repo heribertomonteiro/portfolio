@@ -126,7 +126,7 @@ const Projects = () => {
     <div className="w-full max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto">
       <div className="flex flex-col xl:flex-row xl:gap-8">
         <div className="w-full xl:w-[50%] flex flex-col xl:justify-between order-2 xl:order-0">
-          <div className="h-115 flex flex-col gap-6 rounded-xl border border-white/10 bg-white/5 p-6 xl:p-8">
+          <div className="min-h-115 flex flex-col gap-6 rounded-xl border border-white/10 bg-white/5 p-6 xl:p-8">
             {/** Project Number */}
             <div className="text-6xl leading-none font-extrabold text-outline text-transparent opacity-70">{project.num}</div>
             {/** Project Header */}
